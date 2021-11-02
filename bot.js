@@ -72,7 +72,7 @@ bot.command("valo", (ctx) => {
 bot.command("annoy", (ctx) => {
   const username = "@xencodes";
 
-  new Array(5).fill(null).map(async () => {
+  new Array(15).fill(null).map(async () => {
     const { message_id } = await ctx.reply(username);
     setTimeout(() => ctx.deleteMessage(message_id), 100);
   });
