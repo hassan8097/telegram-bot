@@ -57,12 +57,6 @@ const stickers = [
   "CAACAgIAAxkBAAOkYYFLZZKg4NzOP_S22Wzo6e1MDbAAAmwKAAKaI_lJ6LFfLscxN2UhBA",
 ];
 
-// bot.command("valo", (ctx) => {
-//   ctx.replyWithSticker(
-
-//   );
-// });
-
 bot.command("valo", (ctx) => {
   const length = stickers.length;
   const random = Math.floor(Math.random() * length - 1);
