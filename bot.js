@@ -2,6 +2,10 @@ const axios = require("axios");
 const { Markup, Telegraf } = require("telegraf");
 const bot = new Telegraf("2038911438:AAHchz_TSG9A9XL_hUbzAVfmO_GJQyiVp4E");
 
+const valoCommand = require("./commands/valo");
+
+bot.use(valoCommand);
+
 const BUDDHA_ID =
   "CAACAgUAAxkBAANRYYFArEgwkEzA8LEPE8i27uu43AUAAs4AA7ztLSAkgdkbUXnD8SEE";
 
@@ -71,4 +75,5 @@ bot.command("annoy", (ctx) => {
     setTimeout(() => ctx.deleteMessage(message_id), 100);
   });
 });
+
 bot.launch();
