@@ -1,6 +1,8 @@
+require("dotenv/config");
+
 const axios = require("axios");
 const { Markup, Telegraf } = require("telegraf");
-const bot = new Telegraf("2038911438:AAHchz_TSG9A9XL_hUbzAVfmO_GJQyiVp4E");
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const valoCommand = require("./commands/valo");
 
@@ -76,4 +78,6 @@ bot.command("annoy", (ctx) => {
   });
 });
 
-bot.launch();
+bot.launch().then(() => {
+  console.log("Bot Launched");
+});
